@@ -2,6 +2,6 @@ package hu.petrik.szuperhosprojekt;
 
 public interface Szuperhos {
 
-    boolean legyoziE(Bosszuallo ertek);
-    float mekkoraAzEreje();
+    boolean legyoziE(Szuperhos ertek);
+    double mekkoraAzEreje();
 }

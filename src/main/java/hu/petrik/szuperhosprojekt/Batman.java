@@ -9,13 +9,13 @@ public class Batman implements Szuperhos, Milliardos{
     }
 
     @Override
-    public float mekkoraAzEreje(){
+    public double mekkoraAzEreje(){
         return this.lelemenyesseg*2;
     }
 
     @Override
-    public boolean legyoziE(Bosszuallo ertek){
-        if(this.lelemenyesseg > ertek.getSzuperero()){
+    public boolean legyoziE(Szuperhos ertek){
+        if(ertek.mekkoraAzEreje() < this.lelemenyesseg){
             return true;
         }
 

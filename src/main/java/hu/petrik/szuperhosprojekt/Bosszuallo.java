@@ -40,21 +40,26 @@ public abstract class Bosszuallo implements Szuperhos {
     }
 
     @Override
-    public float mekkoraAzEreje(){
+    public double mekkoraAzEreje(){
         return this.szuperero;
     }
 
 
     @Override
-    public boolean legyoziE(Bosszuallo ertek){
-        if(ertek.vanEGyengesege == true){
-            if(ertek.mekkoraAzEreje() < this.mekkoraAzEreje()){
+    public boolean legyoziE(Szuperhos ertek){
+        if(ertek instanceof Bosszuallo){
+            if(((Bosszuallo) ertek).vanEGyengesege && ertek.mekkoraAzEreje() < this.mekkoraAzEreje()){
                 return true;
+            }
+        } else if(ertek instanceof Batman){
+            if(this.mekkoraAzEreje() > ertek.mekkoraAzEreje()*2){
+                return true;
+            }
+            else {
+                return false;
             }
         }
 
         return false;
     }
-
-    public abstract boolean megmentiAvilagot();
 }

@@ -30,10 +30,6 @@ public class Vasember extends Bosszuallo implements Milliardos{
         return false;
     }
 
-    @Override
-    public boolean megmentiAvilagot() {
-        return false;
-    }
 
     @Override
     public String toString() {
